@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>心来 | Dancer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <img src="./images/profile.jpg" alt="心来 アーティスト写真">
+    <div class="hero-text">
+      <h1>心来/mirai</h1>
+      <p class="role">dancer</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about fade-section">
+    <p class="about-text">
+      テーマパークダンサーを目指しながら、<br>
+      日々オールジャンルのダンスレッスンや舞台に励んでいます。<br>
+      表現力と世界観を大切に、心に残るパフォーマンスを追求しています。
+    </p>
+  </section>
+
+  <!-- Genre -->
+  <section class="genre fade-section">
+    <h2>Genre</h2>
+    <p>Jazz / Jazz Funk / Hip Hop</p>
+  </section>
+
+  <!-- Movie -->
+  <section class="movie fade-section">
+    <h2>Dance Movie</h2>
+
+    <div class="video">
+      <iframe width="398" height="707" src="https://www.youtube.com/embed/oBxsF9BLcFM" title="2026年1月6日" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="398" height="707" src="https://www.youtube.com/embed/eIzZPqUVdVU" title="2026年1月6日" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- 必要なら増やせる
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/動画ID" allowfullscreen></iframe>
+    </div>
+    -->
+
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <a href="https://instagram.com/mirai.825" target="_blank">
+      Instagram @mirai.825
+    </a>
+  </section>
+<script>
+  const sections = document.querySelectorAll('.fade-section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
+</body>
+</html>
